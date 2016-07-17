@@ -10,10 +10,8 @@
 <body>
 <?php
 	$name = $_POST['name'];
-
 	session_start();
   $_SESSION['name'] = $name;
-	$_SESSION['question'] = $question;
 
 ?>
 
