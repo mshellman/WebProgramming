@@ -24,13 +24,13 @@
 
         <tr>
 
-		<td class="box"><a href="home.html">Home</a></td>
+		<td class="box"><a href="../home.html">Home</a></td>
 
-        <td class="box"><a href="recipes.html">Recipes</a></td>
+        <td class="box"><a href="../recipes.html">Recipes</a></td>
 
-        <td class="box"><a href="exercises.html">Exercises</a></td>
+        <td class="box"><a href="../exercises.html">Exercises</a></td>
 
-		<td class="box"><a href="fitquiz.html">The Fit Quiz</a></td>
+		<td class="box"><a href="../fitquiz.html">The Fit Quiz</a></td>
 
         </tr>
 
