@@ -6,7 +6,7 @@
   <title>The Fit Quiz</title>
   <link rel="stylesheet" href="question.css">
 </head>
-<?php 
+<?php
 
 	$fid = $_GET['id'];
 
@@ -29,7 +29,7 @@
 	$answer7= $_POST['answerSeven'];
 	$answer8= $_POST['answerEight'];
 	$score = 0;
-	
+
 	switch ($question) {
      case "1":
 	 	if ($answer1 == "D" || "C"){$score++;}
@@ -48,7 +48,7 @@
 		if ($answer4 == "E"){$score--;}
 		if ($answer5 == "A"){$score--;}
 		if ($answer6 == "C"){$score--;}
-		if ($answer7 == "D"){$score--
+		if ($answer7 == "D"){$score--;}
 		if ($answer8 == "D"){$score--;}
          break;
      case "3":
@@ -64,27 +64,28 @@
          echo "Nothing";
 }
 
-	if ($score <= 0){
-		
+	if ($score < 0){
+
 	echo "<h2>You are not living a healthy lifestyle, you should check out the rest of this site for useful resources to begin living a fit life.</h2>";
-	?> 	
-	<?php
-	else if ($score == 0){
-		
-	echo "<h2>You live a semi-active lifestyle, but you could implement some small lifestyle chagnes to begin living the fit life.</h2>";
-	
-	?> 	
-	<?php
-	}
-	else { echo "<h2>Congratulations! You are already living a fit life!</h2>";
+}
 	?>
-	<?php }
-	
+	<?php
+	if ($score == 0){
+
+	echo "<h2>You live a semi-active lifestyle, but you could implement some small lifestyle chagnes to begin living the fit life.</h2>";
+}
+	?>
+	<?php
+	if ($score > 0) { echo "<h2>Congratulations! You are already living a fit life!</h2>";
+  }
+	?>
+	<?php
+
 	 echo "<center><font face='Berlin Sans FB' size='12'>Your Score is <br/> $score/10</font></center><br><br><br>"; ?>
-	 
-	 
+
+
 	 <div class="button">
-	 <form action='Project2.html' >
+	 <form action='fitquiz.html' >
 	 <input type="submit" name="submit" class="submit" value="RESTART"/>
 	</form>
 	<div>

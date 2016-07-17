@@ -2,27 +2,26 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="Author" content="Megan Shellman">
-  <meta name="Description" content="The Fit Quiz Beginner" />
+  <meta name="Description" content="The Fit Quiz Pro" />
   <title>The Fit Quiz</title>
   <link rel="stylesheet" href="question.css">
 </head>
 
 <body>
-<?php
-	$question = $_POST['question'];
-	$name = $_POST['name'];
+  <?php
 
-	$name = $_SESSION['name'];
-	$_SESSION['question'] = $question;
+  session_start();
+    $name = $_SESSION['name'];
+    $_SESSION['type'] = "pro";
 
-?>
+  ?>
 
-<div class="forms">
+  <div class="forms">
 
-<h1 color="black"><?php echo "$name, which of these best describes you?";?></h1>
-</div>
+  <h1 color="black"><?php echo "Okay, $name, let's see how fit you are.";?></h1>
+  </div>
 
-<?php
+  <?php
 
 	echo "
 <form action='process.php?id=1' method='post' id='quizForm' id='1'>
