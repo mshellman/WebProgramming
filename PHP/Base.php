@@ -7,11 +7,11 @@
 		}
 		else if($level == "1")
 		{
-			header("Location: ../beginner.html");
+			header("Location: beginner.php?level=".$level);
 		}
 		else if($level == "2")
 		{
-			header("Location: pro.php?level=".$level;
+			header("Location: pro.php?level=".$level);
 		}
 		exit;
 	}

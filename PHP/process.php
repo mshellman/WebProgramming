@@ -12,7 +12,39 @@
 
 ?>
 <body>
+	<h1> Your Guide to Fit and Fabulous</h1>
+
+<hr>
+
+
+
+<div id="navbar">
+
+    <table id="tab">
+
+        <tr>
+
+		<td class="box"><a href="home.html">Home</a></td>
+
+        <td class="box"><a href="recipes.html">Recipes</a></td>
+
+        <td class="box"><a href="exercises.html">Exercises</a></td>
+
+		<td class="box"><a href="fitquiz.html">The Fit Quiz</a></td>
+
+        </tr>
+
+    </table>
+
+</div>
+
+<hr>
+
+
+
+<br/>
 <div id="forms">
+
 
 
 
@@ -20,19 +52,17 @@
 
 	session_start();
 	$score = 0;
-	$question = $_SESSION['question'];
 	$answer1= $_POST['answerOne'];
 	$answer2= $_POST['answerTwo'];
 	$answer3= $_POST['answerThree'];
 	$answer4= $_POST['answerFour'];
 	$answer5= $_POST['answerFive'];
 	$answer6= $_POST['answerSix'];
-	$answer7= $_POST['answerSeven'];
-	$answer8= $_POST['answerEight'];
 
-function couchPotato($score)
-{
-	if ($answer1 == "D" || "C")
+	switch ($fid) {
+     case "0":
+     	$score = 10;
+	 		if ($answer1 == "D" || "C")
 		{
 			$score++;
 		}else{
@@ -64,13 +94,6 @@ function couchPotato($score)
 			$score++;
 		}
 	if ($answer6 == "A"){$score++;}
-	if ($answer7 == "A" || "B"){$score++;}
-	if ($answer8 == "A" || "B"){$score++;}
-}
-	switch ($question) {
-     case "0":
-     	$score = 10;
-	 	couchPotato($score);
          break;
      case "1":
      $score = 20;
@@ -126,19 +149,18 @@ function couchPotato($score)
 }
 	?>
 	<?php
-	if ($score >= 26 && $score <= 40) { echo "<h2>Congratulations! You are already living a fit life!</h2>";
-  }
-	?>
-	<?php
+	if ($score >= 26 && $score <= 40) {
+	 echo "<h2>Congratulations! You are already living a fit life!</h2>";
 	echo '<center><img src="../Photos/greatResult.jpg"></center>';
-    echo "<h2>Congratulations! You are already living a fit life!</h2>";
     echo 'Here is a list of links to check out to get even bigger:
     <ul>
     <li><a href=""></a></li>
     <li><a href=""></a></li>
     </ul>
     ';
-	  ?>
+  }
+  ?>
+	
 
 
 	 <div class="button">
