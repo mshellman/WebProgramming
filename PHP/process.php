@@ -19,6 +19,7 @@
 <?php
 
 	session_start();
+	$score = 0;
 	$question = $_SESSION['question'];
 	$answer1= $_POST['answerOne'];
 	$answer2= $_POST['answerTwo'];
@@ -28,20 +29,51 @@
 	$answer6= $_POST['answerSix'];
 	$answer7= $_POST['answerSeven'];
 	$answer8= $_POST['answerEight'];
-	$score = 0;
 
+function couchPotato($score)
+{
+	if ($answer1 == "D" || "C")
+		{
+			$score++;
+		}else{
+			$score--;
+		}
+	if ($answer2 == "B")
+		{
+			$score++;
+		}else
+		{
+			$score--;
+		}
+	if ($answer3 == "C")
+		{
+			$score++;
+		}else if($answer3 == "D" || $answer3 == "E")
+		{
+			$score--;
+		}
+	if ($answer4 == "B" || "A")
+		{
+			$score++;
+		}else
+		{
+			$score--;
+		}
+	if ($answer5 == "C" || "D")
+		{
+			$score++;
+		}
+	if ($answer6 == "A"){$score++;}
+	if ($answer7 == "A" || "B"){$score++;}
+	if ($answer8 == "A" || "B"){$score++;}
+}
 	switch ($question) {
-     case "1":
-	 	if ($answer1 == "D" || "C"){$score++;}
-		if ($answer2 == "B"){$score++;}
-		if ($answer3 == "C"){$score++;}
-		if ($answer4 == "B" || "A"){$score++;}
-		if ($answer5 == "C" || "D"){$score++;}
-		if ($answer6 == "A"){$score++;}
-		if ($answer7 == "A" || "B"){$score++;}
-		if ($answer8 == "A" || "B"){$score++;}
+     case "0":
+     	$score = 10;
+	 	couchPotato($score);
          break;
-     case "2":
+     case "1":
+     $score = 20;
 	 	if ($answer1 == "A"){$score--;}
 		if ($answer2 == "A"){$score--;}
 		if ($answer3 == "A"){$score--;}
@@ -51,7 +83,8 @@
 		if ($answer7 == "D"){$score--;}
 		if ($answer8 == "D"){$score--;}
          break;
-     case "3":
+     case "2":
+     $score = 30;
 	 	if ($answer1 == "B" || "C"){$score = $score;}
 		if ($answer3 == "B"){$score = $score;}
 		if ($answer4 == "C" || "D"){$score = $score;}
@@ -64,24 +97,48 @@
          echo "Nothing";
 }
 
-	if ($score < 0){
+	if ($score >= 0 && $score <=15){
 
-	echo "<h2>You are not living a healthy lifestyle, you should check out the rest of this site for useful resources to begin living a fit life.</h2>";
+	 echo '<center><img src="../Photos/badResult.jpg"></center>';
+    echo "<h2>You are not living a healthy lifestyle, you should check out the rest of this site for useful resources to begin living a fit life.</h2>";
+  echo 'Here is a list of links to check out to get into healthier habits:
+    <ul>
+    <li><a href="http://www.health.com/health/gallery/0,,20668027,00.html">http://www.health.com/health/gallery/0,,20668027,00.html</a></li>
+    <li><a href="http://zenhabits.net/getting-healthy/">http://zenhabits.net/getting-healthy/</a></li>
+    <li><a href="http://www.mindbodygreen.com/0-14078/26-ridiculously-easy-ways-to-be-healthy.html">http://www.mindbodygreen.com/0-14078/26-ridiculously-easy-ways-to-be-healthy.html</a></li>
+    <li><a href="http://greatist.com/grow/easy-health-tips-busy-lifestyles">http://greatist.com/grow/easy-health-tips-busy-lifestyles</a></li>
+    </ul>
+  ';
 }
 	?>
 	<?php
-	if ($score == 0){
+	if ($score >= 16 && $score <= 25){
 
-	echo "<h2>You live a semi-active lifestyle, but you could implement some small lifestyle chagnes to begin living the fit life.</h2>";
+	echo '<center><img src="../Photos/okayResult.jpg"></center>';
+  	echo "<h2>You live a semi-active lifestyle, but you could implement some small lifestyle chagnes to begin living the fit life.</h2>";
+  echo 'Here is a list of links to check out to keep you in shape:
+  <ul>
+  <li><a href="http://www.livestrong.com/article/172891-how-to-keep-your-body-in-good-shape/">http://www.livestrong.com/article/172891-how-to-keep-your-body-in-good-shape/</a></li>
+  <li><a href="http://www.healthbeckon.com/simple-tips-to-maintain-a-slim-body/">http://www.healthbeckon.com/simple-tips-to-maintain-a-slim-body/</a></li>
+  <li><a href="http://www.empathogen.net/2012/12/how-to-maintain-your-perfect-body-shape-using-the-regular-exercise/">http://www.empathogen.net/2012/12/how-to-maintain-your-perfect-body-shape-using-the-regular-exercise/</a></li>
+  </ul>
+  ';
 }
 	?>
 	<?php
-	if ($score > 0) { echo "<h2>Congratulations! You are already living a fit life!</h2>";
+	if ($score >= 26 && $score <= 40) { echo "<h2>Congratulations! You are already living a fit life!</h2>";
   }
 	?>
 	<?php
-
-	 echo "<center><font face='Berlin Sans FB' size='12'>Your Score is <br/> $score/10</font></center><br><br><br>"; ?>
+	echo '<center><img src="../Photos/greatResult.jpg"></center>';
+    echo "<h2>Congratulations! You are already living a fit life!</h2>";
+    echo 'Here is a list of links to check out to get even bigger:
+    <ul>
+    <li><a href=""></a></li>
+    <li><a href=""></a></li>
+    </ul>
+    ';
+	  ?>
 
 
 	 <div class="button">

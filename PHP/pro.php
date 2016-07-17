@@ -24,7 +24,7 @@
   <?php
 
 	echo "
-<form action='process.php?id=1' method='post' id='quizForm' id='1'>
+<form action='process.php?id=2' method='post' id='quizForm' id='1'>
 
 	<ul>
     	<li>
