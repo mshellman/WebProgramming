@@ -11,7 +11,7 @@
 		}
 		else if($level == "2")
 		{
-			header("Location: pro.php?level=".$level);
+			header("Location: pro.php?level=".$level;
 		}
 		exit;
 	}
