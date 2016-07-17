@@ -4,7 +4,7 @@
   <meta name="Author" content="Megan Shellman">
   <meta name="Description" content="The Fit Quiz Beginner" />
   <title>The Fit Quiz</title>
-  <link rel="stylesheet" href="question.css">
+  <link rel="stylesheet" href="../CSS/question.css">
 </head>
 
 <body>
