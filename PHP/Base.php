@@ -1,28 +1,24 @@
 <?php
-function Redirect($level)
+	function Redirect($level)
 	{
 		if($level == "0")
 		{
-			header("Location: couchPotato.php");
+			header("Location: couchPotato.php?level=".$level);
 		}
 		else if($level == "1")
 		{
-			header("Location: ../beginner.html");
+			header("Location: beginner.php?level=".$level);
 		}
 		else if($level == "2")
 		{
-			header("Location: pro.php");
+			header("Location: pro.php?level=".$level);
 		}
 		exit;
 	}
-class Base
-{
-	$score = 0;
 	$level = 0;
 	if(isset($GET['value']))
 	{
 		$level = $_GET['value'];
 	}
 	Redirect($level);
-}
 ?>
