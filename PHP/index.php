@@ -12,7 +12,6 @@
 	$name = $_POST['name'];
 	session_start();
   $_SESSION['name'] = $name;
-
 ?>
 
 <div class="forms">
@@ -20,9 +19,9 @@
 <h1 color="black"><?php echo "$name, which of these best describes you?";?></h1>
 </div>
 <table align="center">
-  <td width="33%"> <a href="../PHP/couchPotato.php"><img src="../Photos/couch-potato.jpg"></a></td>
-  <td width="33%"> <a href="../PHP/beginner.php"><img src="../Photos/beginner.jpg"></a></td>
-  <td width="33%"> <a href="../PHP/pro.php"><img src="../Photos/pro.png"></a></td>
+  <td width="33%"> <a href="../PHP/Base.php?value=0"><img src="../Photos/couch-potato.jpg"></a></td>
+  <td width="33%"> <a href="../PHP/Base.php?value=1"><img src="../Photos/beginner.jpg"></a></td>
+  <td width="33%"> <a href="../PHP/Base.php?value=2"><img src="../Photos/pro.png"></a></td>
 </table>
 </div>
 </body>
