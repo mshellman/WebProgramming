@@ -1,0 +1,114 @@
+@charset "utf-8";
+* {
+    font-family: Verdana, Geneva, sans-serif;
+  }
+body {
+color: black;
+	background-image: url("background.jpg");
+}
+
+h1{
+	color: Black;
+	font-family:Verdana, Geneva, sans-serif;
+	text-align:center;
+	text-shadow: 4px 4px 6px #BEBEBE;
+	font-size:500%;
+}
+
+p{
+	color: black;
+	text-align: center;
+	font-family:Verdana, Geneva, sans-serif;
+}
+
+#container{
+	align: center;
+}
+#navbar {
+		margin-top: -15px;
+		margin-bottom: -15px;
+		color:black;
+
+	}
+
+#tab {
+
+	color:black;
+	padding: 10px;
+	margin-left:auto;
+	margin-right:auto;
+    border-spacing: 200px 10px;
+	}
+
+    .box {
+		background:#bdbdbd;
+		color:#000000;
+		border-radius: 10px;
+		padding: 5px;
+		font-family:Verdana, Geneva, sans-serif;
+		color:black;
+		font-size: 30px;
+
+	}
+
+	.box a:hover{
+		color:#696969;
+	}
+
+    .content {
+		background-image: url("tablebackground.jpg");
+		color:black;
+		padding: 5px;
+		font-family:Verdana, Geneva, sans-serif;
+		font-size: 20px;
+		width: 200px;
+		padding-bottom: 20px;
+	}
+	 .Top {
+		 text-align: center;
+	 }
+
+	#Vegetarian, #Vegetarian1, #Paleo, #Paleo1, #GF, #GF1 {
+			list-style-type: none;
+	}
+
+	a:link {
+    color: #000000;
+}
+
+
+a:visited {
+    color: #000000;
+}
+
+#content {
+    position: relative;
+}
+#content img {
+    position: absolute;
+    top: -95px;
+    right: 0px;
+
+}
+
+#content2 {
+    position: relative;
+}
+#content2 img {
+    position: absolute;
+    top: -55px;
+    right: 50px;
+	width: 15%;
+
+}
+
+#content3 {
+    position: relative;
+}
+#content3 img {
+    position: absolute;
+    top: -225px;
+    right: 50px;
+	width: 15%;
+
+}

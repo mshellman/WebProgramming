@@ -1,0 +1,155 @@
+@charset "utf-8";
+
+body {
+	
+	background-image: url("background.jpg");
+}
+
+h1{
+	color: Black;
+	font-family:"Courier New", Courier, monospace;
+	text-align:center;
+	text-shadow: 4px 4px 6px #BEBEBE;
+	font-size:500%;
+}
+
+p{
+	color: white;
+	text-align: center;
+	font-family:Impact, Charcoal, sans-serif;
+}
+
+#navbar {
+		margin-top: -15px;
+		margin-bottom: -15px;
+	}
+	
+#tab {
+	color:#000000;
+	padding: 10px;
+	margin-left:auto;
+	margin-right:auto;	
+    border-spacing: 200px 10px;
+	}
+
+    .box {
+		background:#696969;
+		color:#FFFFFF;
+		border-color:#A00000;
+		border-radius: 10px;
+		padding: 5px;
+		font-family:Impact, Charcoal, sans-serif;
+		font-size: 30px;
+
+	}
+	
+    .content {
+		background-image: url("tablebackground.jpg");
+		color:#FFFFFF;
+		padding: 5px;
+		font-family:Impact, Charcoal, sans-serif;
+		font-size: 20px;
+		width: 200px;
+		padding-bottom: 20px;
+	}
+	 .Top {
+		 text-align: center;
+	 }
+	
+	#Vegetarian, #Vegetarian1, #Paleo, #Paleo1, #GF, #GF1 {
+			list-style-type: none;
+	}
+	
+	a:link {
+    color: #D3D3D3;
+}
+
+
+a:visited {
+    color: #D3D3D3;
+}
+	
+div.game1 {
+    position: relative;
+    bottom: 500px;
+    left: 300px;
+    width: 200px;
+    height: 200px;
+    border: 3px solid #696969;
+}
+div.game2 {
+    position: relative;
+    bottom: 706px;
+    left: 550px;
+    width: 200px;
+    height: 200px;
+    border: 3px solid #696969;
+}
+div.game3 {
+    position: relative;
+    bottom: 912px;
+    left: 800px;
+    width: 200px;
+    height: 200px;
+    border: 3px solid #696969;
+}
+div.game4 {
+    position: relative;
+    bottom: 1118px;
+    left: 1050px;
+    width: 200px;
+    height: 200px;
+    border: 3px solid #696969;
+}
+
+div.game6 {
+    position: relative;
+    bottom: 1070px;
+    left: 550px;
+    width: 200px;
+    height: 200px;
+    border: 3px solid #696969;
+	 
+}
+
+div.game7 {
+    position: relative;
+    bottom: 1275px;
+    left: 800px;
+    width: 200px;
+    height: 200px;
+    border: 3px solid #696969;
+	 
+}
+
+#content {
+    position: relative;
+}
+#content img {
+    position: absolute;
+    top: -95px;
+    right: 0px;
+
+}
+
+#content2 {
+    position: relative;
+}
+#content2 img {
+    position: absolute;
+    top: -55px;
+    right: 50px;
+	width: 15%;
+
+}
+
+#content3 {
+    position: relative;
+}
+#content3 img {
+    position: absolute;
+    top: -225px;
+    right: 50px;
+	width: 15%;
+
+}
