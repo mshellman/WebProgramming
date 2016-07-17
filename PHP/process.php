@@ -4,7 +4,7 @@
   <meta name="Author" content="Megan Shellman">
   <meta name="Description" content="The Fit Quiz" />
   <title>The Fit Quiz</title>
-  <link rel="stylesheet" href="../CSS/question.css">
+  <link rel="stylesheet" href="../CSS/styleproject.css">
 </head>
 <?php
 
@@ -75,7 +75,7 @@
 		{
 			$score--;
 		}
-	if ($answer3 == "C")
+	if ($answer3 == "C" || $answer3 == "A" || $answer3 == "B")
 		{
 			$score++;
 		}else if($answer3 == "D" || $answer3 == "E")
@@ -159,6 +159,7 @@
     </ul>
     ';
   }
+  echo "<h3>Score is ".$score."/40</h3>";
   ?>
 	
 
